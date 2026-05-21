@@ -184,7 +184,7 @@ class Controle{
         let lista = document.querySelectorAll('.rotation')[index].childNodes
 
         lista[branco].style.background = '#fff';
-        lista[cinza].style.background = '#414141';
+        lista[cinza].style.background = '#202020';
         
     }
 
@@ -316,7 +316,7 @@ class Controle{
                     .setAttribute('class', 'generalArrowStyle ativo');
 
                     // ROTAÇÃO
-                    bolinhas[0].style.background = '#414141';
+                    bolinhas[0].style.background = '#000000';
                     bolinhas[1].style.background = '#fff';
 
                     break;
@@ -331,7 +331,7 @@ class Controle{
 
                     // ROTAÇÃO
                     bolinhas[0].style.background = '#fff';
-                    bolinhas[1].style.background = '#414141';
+                    bolinhas[1].style.background = '#000000';
 
                     cont = 0;
 
@@ -353,7 +353,7 @@ class Controle{
                     });
 
                     // ROTAÇÃO
-                    bolinhas[0].style.background = '#414141';
+                    bolinhas[0].style.background = '#000000';
                     bolinhas[1].style.background = '#fff';
 
                     cont = 1;
@@ -370,7 +370,7 @@ class Controle{
 
                     // ROTAÇÃO
                     bolinhas[0].style.background = '#fff';
-                    bolinhas[1].style.background = '#414141';
+                    bolinhas[1].style.background = '#000000';
 
                     cont = 0;
 
