@@ -16,6 +16,7 @@ class Controle{
     }
 
     rightArrowConfiguration(rightArrow, leftArrow, scroll, scrollIndex, cont, indexSectionMarkup){
+    
 
         rightArrow.addEventListener('click', e=>{
 
@@ -29,7 +30,7 @@ class Controle{
 
                     /* scroll */
                     this.scrollStyleFunction(indexSectionMarkup, 3, 1);
-                    document.querySelectorAll('.SagaWinxFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.SagaWinxFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
 
                     /* Estilização de seta esquerda */
                     scroll.style.margin = '0';
@@ -40,43 +41,43 @@ class Controle{
                 case 2:
 
                     this.scrollStyleFunction(indexSectionMarkup, 5, 3);
-                    document.querySelectorAll('.OidnbFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.OidnbFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
                 
                 case 3:
 
                     this.scrollStyleFunction(indexSectionMarkup, 7, 5);
-                    document.querySelectorAll('.bakiFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.bakiFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
 
                 case 4:
     
                     this.scrollStyleFunction(indexSectionMarkup, 9, 7);
-                    document.querySelectorAll('.dahmerFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.dahmerFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
     
                 case 5:
     
                     this.scrollStyleFunction(indexSectionMarkup, 11, 9);
-                    document.querySelectorAll('.mistaUmFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.mistaUmFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
     
                 case 6:
     
                     this.scrollStyleFunction(indexSectionMarkup, 13, 11);
-                    document.querySelectorAll('.misturaDoisFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.misturaDoisFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
     
                 case 7:
     
                     this.scrollStyleFunction(indexSectionMarkup, 15, 13);
-                    document.querySelectorAll('.misturaTresFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.misturaTresFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     break;
     
                 case 8:
 
                     this.scrollStyleFunction(indexSectionMarkup, 1, 15);
-                    document.querySelectorAll('.inicioMortePCarona')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.inicioMortePCarona')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont = 0;
                     break;
     
@@ -95,14 +96,14 @@ class Controle{
                 
                 case 0:
 
-                    document.querySelectorAll('.misturaTresFinal')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.misturaTresFinal')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     //this.scrollStyleFunction(indexSectionMarkup, 15, 1)
                     cont = 6;
                     
                 case 1:
                     
                     //
-                    document.querySelectorAll('.inicioMortePCarona')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.inicioMortePCarona')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     this.scrollStyleFunction(indexSectionMarkup, 1, 3);
                     cont -= 1;
                     
@@ -111,7 +112,7 @@ class Controle{
                 case 2:
 
                     this.scrollStyleFunction(indexSectionMarkup, 3, 5);
-                    document.querySelectorAll('.SagaWinxInicio')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.SagaWinxInicio')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
@@ -120,7 +121,7 @@ class Controle{
                 case 3:
 
                     this.scrollStyleFunction(indexSectionMarkup, 5, 7);
-                    document.querySelectorAll('.OidnbInicio')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.OidnbInicio')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
@@ -128,7 +129,7 @@ class Controle{
                 case 4:
 
                     this.scrollStyleFunction(indexSectionMarkup, 7, 9);
-                    document.querySelectorAll('.bakiInicio')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.bakiInicio')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
@@ -136,7 +137,7 @@ class Controle{
                 case 5:
 
                     this.scrollStyleFunction(indexSectionMarkup, 9, 11)
-                    document.querySelectorAll('.inicioDahmer')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.inicioDahmer')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
@@ -145,7 +146,7 @@ class Controle{
 
                     
                     this.scrollStyleFunction(indexSectionMarkup, 11, 13);
-                    document.querySelectorAll('.misturaUmInicio')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.misturaUmInicio')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
@@ -153,18 +154,12 @@ class Controle{
                 case 7:
                     
                     this.scrollStyleFunction(indexSectionMarkup, 13, 15)
-                    document.querySelectorAll('.misturaDoisInicio')[scrollIndex].scrollIntoView({ behavior: "smooth" });
+                    document.querySelectorAll('.misturaDoisInicio')[scrollIndex].scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont -= 1;
                     
                     break;
 
-                /*case 8:
-
-                    this.scrollStyleFunction(indexSectionMarkup, 15, 1);
-                    document.querySelectorAll('.inicioMortePCarona')[scrollIndex].scrollIntoView({ behavior: "smooth" });
-                    cont -= 1;
-                    //console.log('ok')
-                    break;*/
+                
 
             }
         })
@@ -194,21 +189,23 @@ class Controle{
     }
 
     //Função que deixa a barra header visivel ou não de acordo com o scroll
-    headerBar(){
+    headerBar() {
 
-        let tag = document.querySelector('.mainNavigation')
-        window.addEventListener('scroll', ()=>{
+        let tag = document.querySelector('.mainNavigation');
 
-            if(window.scrollY > 0){
+        window.addEventListener('scroll', () => {
 
-                tag.removeAttribute('id');
-                tag.setAttribute('id', 'visivel');
+            // quando descer a página
+            if (window.scrollY > 0) {
 
-            }else{
+                tag.style.transform = 'translateY(-100%)';
+                tag.style.transition = '0.4s';
 
-                tag.removeAttribute('id');
-                tag.setAttribute('id', 'naovisivel');
+            } else {
 
+                // volta ao topo
+                tag.style.transform = 'translateY(0)';
+                tag.style.transition = '0.4s';
 
             }
 
@@ -217,58 +214,78 @@ class Controle{
     }
 
     //Animação da caixa de pesquisa
-    searchBoxAnimation(){
+   searchBoxAnimation() {
 
-        window.addEventListener('click', (e)=>{
-            
-            let id = e.target.parentElement.parentElement.id;
+        window.addEventListener('click', (e) => {
+
             let buttonBox = document.querySelector("#searchtBoxInt");
             let inputSearch = document.querySelector('#searchtBoxInt__pesq');
 
-            console.log(id)
-            if(id == "searchtBoxInt" || id == ""){
-                
+            // verifica se clicou dentro da caixa
+            if (buttonBox.contains(e.target)) {
+
                 buttonBox.setAttribute('class', 'search_box_styling');
                 inputSearch.style.width = '250px';
 
-            }else if(id != "searchtBoxInt"){
-                
+            } else {
+
+                // clicou fora -> volta ao estado inicial
                 buttonBox.removeAttribute('class');
                 inputSearch.style.width = '0px';
 
             }
 
-        })
+        });
 
     }
 
     //Fundo de tela
 
-    main_background_screen(){
+    main_background_screen() {
 
-        let video = document.querySelector('#video')
+        let video = document.querySelector('#tagVideo');
+        let videoContainer = document.querySelector('#video');
         let ImgButton = document.querySelector('#muteImg');
-        
-        video.style.display = 'none';
 
-        //quando o video começar
-        setTimeout(()=>{
+        // começa mutado
+        video.muted = true;
 
-            video.style.display = 'block';
-            this.header.style.background='transparent';
-        
-        }, 3000)
+        videoContainer.style.display = 'none';
 
-        document.querySelector("#tagVideo").onended = ()=>{
+        setTimeout(() => {
 
-            //Voltando com a imagem
-            video.style.display = 'none';
-            this.header.style.backgroundImage = 'url(https://occ-0-933-420.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABWMZa8iWRT8VWOH6tIdbS_gfxSRLwxaMw7QiiBwy-V-q52w2yA5aNeyVqGNrbS2MMXYV8o39ofeoVPFmmNYs7oqwj7yISMASgvQz.webp?r=618)';
+            videoContainer.style.display = 'block';
+            this.header.style.background = 'transparent';
 
-            //Mudando a função do botão
-            ImgButton.src="https://img.icons8.com/ios-glyphs/20/null/recurring-appointment.png";
+            video.play();
 
-        }
+        }, 3000);
+
+        ImgButton.addEventListener('click', () => {
+
+            // alterna
+            video.muted = !video.muted;
+
+            // força play novamente
+            video.play();
+
+            // se estiver mutado
+            if (video.muted) {
+
+                ImgButton.src =
+                    'https://img.icons8.com/ios-glyphs/20/ffffff/no-audio.png';
+
+            } else {
+
+                // ativa áudio
+                video.muted = false;
+
+                ImgButton.src =
+                    'https://img.icons8.com/ios-glyphs/20/ffffff/high-volume.png';
+
+            }
+
+        });
 
     }
 
@@ -287,13 +304,13 @@ class Controle{
 
                 case 1:
 
-                    document.querySelector('#fim').scrollIntoView({ behavior: "smooth" });
+                    document.querySelector('#fim').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     //scroll.style.margin = '0';
                     document.querySelector("#topicsOfTheMonth #leftArrow").setAttribute('class', 'generalArrowStyle ativo');
 
                 case 2:
                     
-                    document.querySelector('#inicio').scrollIntoView({ behavior: "smooth" });
+                    document.querySelector('#inicio').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
                     cont = 0
             }
             
@@ -304,10 +321,10 @@ class Controle{
             switch(cont){
 
                 case 0:
-                    document.querySelector('#fim').scrollIntoView({ behavior: "smooth" });
+                    document.querySelector('#fim').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
 
                 case 2:
-                    document.querySelector('#inicio').scrollIntoView({ behavior: "smooth" });
+                    document.querySelector('#inicio').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
 
             }
 

@@ -20,7 +20,7 @@
         <!--- Video de fundo -->
         <div id='video'>
 
-            <video id='tagVideo' controls autoplay muted>
+            <video id='tagVideo' controls autoplay muted loop>
 
                 <source src="arquivos/HemlockGrove.mp4"/>
 
@@ -775,111 +775,6 @@
     </main>
     <script src="js/index.js">
 
-        //Botão do video
-        //let imagem = document.querySelector('#mute')
-        document.querySelector('video').onplay = e=>{
-            document.querySelector('#mute').addEventListener('click', event=>{
-            
-
-                if(document.querySelector('#muteImg').src != "https://img.icons8.com/ios-filled/20/null/room-sound.png"){
-
-                    document.querySelector('#muteImg').src="https://img.icons8.com/ios-filled/20/null/room-sound.png";
-                    document.querySelector('video').muted = false
-                    boleano = false
-
-                }else{
-
-                    document.querySelector('#muteImg').src="https://img.icons8.com/material-rounded/20/ffffff/no-audio--v1.png"
-                    document.querySelector('video').muted = true
-                    boleano = false
-                }
-
-            })
-            
-        }
-
-        //Fundo de tela
-
-        let header = document.querySelector('header')
-        let video = document.querySelector('#video')
-        let boleano = false
-        video.style.display = 'none';
-
-
-        document.querySelector("#tagVideo").onended = ()=>{
-            
-            
-            
-            //imagem botão
-            document.querySelector('#muteImg').addEventListener('click', event=>{
-
-                video.style.display = 'block';
-                header.style.background='transparent'
-                document.querySelector('video').play()
-                console.log('ok')
-
-                document.querySelector('#muteImg').src="https://img.icons8.com/ios-glyphs/20/null/recurring-appointment.png"
-
-                document.querySelector('video').onplay = e=>{
-                    document.querySelector('#mute').addEventListener('click', event=>{
-                
-                        if(document.querySelector('#muteImg').src != "https://img.icons8.com/ios-filled/20/null/room-sound.png"){
-
-                            document.querySelector('#muteImg').src="https://img.icons8.com/ios-filled/20/null/room-sound.png";
-                            document.querySelector('video').muted = false
-                            boleano = false
-
-                        }else{
-
-                            document.querySelector('#muteImg').src="https://img.icons8.com/material-rounded/20/ffffff/no-audio--v1.png"
-                            document.querySelector('video').muted = true
-                            boleano = false
-                        }
-
-                    })
-            
-        }
-
-            })
-        }
-        /*document.querySelector('#muteImg').src="https://img.icons8.com/ios-glyphs/20/null/recurring-appointment.png"
-
-        document.querySelector('video').onplay = e=>{
-                document.querySelector('#mute').addEventListener('click', event=>{
-            
-                    if(document.querySelector('#muteImg').src != "https://img.icons8.com/ios-filled/20/null/room-sound.png"){
-
-                        document.querySelector('#muteImg').src="https://img.icons8.com/ios-filled/20/null/room-sound.png";
-                        document.querySelector('video').muted = false
-                        boleano = false
-
-                    }else{
-
-                        document.querySelector('#muteImg').src="https://img.icons8.com/material-rounded/20/ffffff/no-audio--v1.png"
-                        document.querySelector('video').muted = true
-                        boleano = false
-                    }
-
-                })
-            
-        }*/
-            /*document.querySelector('#mute').addEventListener('click', event=>{
-
-                if(ocument.querySelector('video').muted == false){
-
-                    document.querySelector('#muteImg').src="https://img.icons8.com/ios-filled/20/null/room-sound.png"
-                    document.querySelector('video').muted = false
-
-                }else{
-
-                    document.querySelector('#muteImg').src="https://img.icons8.com/material-rounded/20/ffffff/no-audio--v1.png";
-                    document.querySelector('video').muted = true
-
-                }
-
-            })*/
-
-        
     </script>
     
 </body>
