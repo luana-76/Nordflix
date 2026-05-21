@@ -294,41 +294,91 @@ class Controle{
 
     topdez(){
 
-        let cont = 0
-        let lista = document.querySelector('#topdez .rotation').childNodes
-        
+        let cont = 0;
+
+        let bolinhas = document.querySelectorAll('#topdez .currentRotation');
+
         document.querySelector("#topicsOfTheMonth #rightArrow").addEventListener('click', e=>{
 
-            cont++
+            cont++;
+
             switch(cont){
 
                 case 1:
 
-                    document.querySelector('#fim').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
-                    //scroll.style.margin = '0';
-                    document.querySelector("#topicsOfTheMonth #leftArrow").setAttribute('class', 'generalArrowStyle ativo');
+                    document.querySelector('#fim').scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                    document.querySelector("#topicsOfTheMonth #leftArrow")
+                    .setAttribute('class', 'generalArrowStyle ativo');
+
+                    // ROTAÇÃO
+                    bolinhas[0].style.background = '#414141';
+                    bolinhas[1].style.background = '#fff';
+
+                    break;
 
                 case 2:
-                    
-                    document.querySelector('#inicio').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
-                    cont = 0
+
+                    document.querySelector('#inicio').scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                    // ROTAÇÃO
+                    bolinhas[0].style.background = '#fff';
+                    bolinhas[1].style.background = '#414141';
+
+                    cont = 0;
+
+                    break;
             }
-            
-        })
+
+        });
 
         document.querySelector("#topicsOfTheMonth #leftArrow").addEventListener('click', e=>{
 
             switch(cont){
 
                 case 0:
-                    document.querySelector('#fim').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
 
-                case 2:
-                    document.querySelector('#inicio').scrollIntoView({behavior: "smooth",block: "nearest",inline: "center"});
+                    document.querySelector('#fim').scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                    // ROTAÇÃO
+                    bolinhas[0].style.background = '#414141';
+                    bolinhas[1].style.background = '#fff';
+
+                    cont = 1;
+
+                    break;
+
+                case 1:
+
+                    document.querySelector('#inicio').scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                    // ROTAÇÃO
+                    bolinhas[0].style.background = '#fff';
+                    bolinhas[1].style.background = '#414141';
+
+                    cont = 0;
+
+                    break;
 
             }
 
-        })
+        });
 
     }
     
