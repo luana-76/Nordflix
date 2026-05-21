@@ -4,177 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NordFlix - Login</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body{
-      width:100%;
-      height:100vh;
-      overflow:hidden;
-      background:#000;
-      position:relative;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-
-    /* Fundo */
-    .background{
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:
-      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
-      url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1974&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      filter:brightness(.8);
-    }
-
-    /* Logo */
-    .logo{
-      position:absolute;
-      top:30px;
-      left:40px;
-      color:#00bfff;
-      font-size:2.5rem;
-      font-weight:bold;
-      z-index:2;
-      letter-spacing:2px;
-      text-shadow:0 0 10px #00bfff;
-    }
-
-    /* Card Login */
-    .login-container{
-      position:relative;
-      z-index:2;
-      width:400px;
-      background:rgba(0,0,0,0.80);
-      padding:50px;
-      border-radius:10px;
-      backdrop-filter:blur(6px);
-      box-shadow:0 0 25px rgba(0,191,255,.3);
-      animation:fade 1s ease;
-    }
-
-    @keyframes fade{
-      from{
-        opacity:0;
-        transform:translateY(30px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    .login-container h1{
-      color:white;
-      margin-bottom:30px;
-      font-size:2rem;
-    }
-
-    .input-box{
-      margin-bottom:20px;
-      position:relative;
-    }
-
-    .input-box input{
-      width:100%;
-      padding:16px;
-      border:none;
-      border-radius:5px;
-      background:#1f1f1f;
-      color:white;
-      font-size:1rem;
-      outline:none;
-      transition:.3s;
-    }
-
-    .input-box input:focus{
-      border:1px solid #00bfff;
-      box-shadow:0 0 10px #00bfff;
-    }
-
-    .login-btn{
-      width:100%;
-      padding:15px;
-      border:none;
-      border-radius:5px;
-      background:#00bfff;
-      color:white;
-      font-size:1rem;
-      font-weight:bold;
-      cursor:pointer;
-      transition:.3s;
-    }
-
-    .login-btn:hover{
-      background:#0095cc;
-      transform:scale(1.02);
-    }
-
-    .extras{
-      margin-top:20px;
-      display:flex;
-      justify-content:space-between;
-      color:#aaa;
-      font-size:.9rem;
-    }
-
-    .extras a{
-      color:#aaa;
-      text-decoration:none;
-      transition:.3s;
-    }
-
-    .extras a:hover{
-      color:#00bfff;
-    }
-
-    .signup{
-      margin-top:30px;
-      color:#888;
-      font-size:.95rem;
-    }
-
-    .signup a{
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .signup a:hover{
-      color:#00bfff;
-    }
-
-    /* Responsivo */
-    @media(max-width:500px){
-
-      .logo{
-        left:20px;
-        font-size:2rem;
-      }
-
-      .login-container{
-        width:90%;
-        padding:35px 25px;
-      }
-
-    }
-  </style>
+  <link rel="stylesheet" href="./css/loginPlataforma.css"/>
 </head>
 <body>
 
   <div class="background"></div>
 
-  <div class="logo">NordFlix</div>
+  <div class="logo"><img src="./logoPreta.png" alt="logo NordFlix"/></div>
 
   <div class="login-container">
 
@@ -188,9 +24,9 @@
       <input type="password" id="senha" placeholder="Senha">
     </div>
 
-    <button class="login-btn" onclick="login()">
+    <a href="./usuario.html"><button class="login-btn">
       Entrar
-    </button>
+    </button></a>
 
     <div class="extras">
       <a href="#">Esqueceu a senha?</a>
@@ -199,25 +35,10 @@
 
     <div class="signup">
       Novo por aqui?
-      <a href="#">Assine agora</a>
+      <a href="./cadastro.html">Assine agora</a>
     </div>
 
   </div>
-
-  <script>
-    function login(){
-
-      const email = document.getElementById('email').value;
-      const senha = document.getElementById('senha').value;
-
-      if(email === '' || senha === ''){
-        alert('Preencha todos os campos!');
-        return;
-      }
-
-      alert('Bem-vindo ao NordFlix 🍿');
-    }
-  </script>
 
 </body>
 </html>

@@ -1,0 +1,161 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+      background:#000;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items: flex-end;
+    }
+
+    /* Fundo */
+    .background{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background: radial-gradient(circle at 20% 95%, #4a2159, #141414 96%);
+      background-size:cover;
+      background-position:center;
+      filter:brightness(.8);
+    }
+
+    /* Logo */
+    .logo{
+      position:absolute;
+      top: 8px;
+      left: 48px;
+    }
+
+    .logo img{width: 200px;}
+
+    /* Card Login */
+    .login-container{
+        position: relative;
+        z-index: 2;
+        width: 552px;
+        background: #e5d3ec;
+        padding: 50px;
+        color: #252526;
+        border-radius: 10px 10px 0 0;
+        backdrop-filter: blur(6px);
+        filter: drop-shadow(2px 4px 6px #5e5e5e);
+        animation: fade 1s ease;
+
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .login-container h1{
+
+      margin-bottom:30px;
+      font-size:2rem;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+      position:relative;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:5px;
+      background:#b7b7b780;
+
+      font-size:1rem;
+      outline:none;
+      transition:.3s;
+    }
+
+    .input-box input:focus{
+      border-bottom:2px solid #000;
+  
+    }
+
+    .login-btn{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius: 100px;
+      background: #000;
+      cursor:pointer;
+      transition:.3s;
+      color: #fff;
+      font-size:1rem;
+      font-weight:bold;
+      text-decoration: none;
+    }
+
+ 
+
+    .login-btn:hover{
+      background:#414141;
+      transform:scale(1.02);
+    }
+
+    .extras{
+      margin-top:20px;
+      display:flex;
+      justify-content:space-between;
+      font-size:.9rem;
+    }
+
+    .extras a{
+      text-decoration:none;
+      transition:.3s;
+      color: #252526;
+    }
+
+    .extras a:hover{
+      color:#888;
+    }
+
+    .signup{
+      margin-top:30px;
+      color:#888;
+      font-size:.95rem;
+    }
+
+    .signup a{
+
+      text-decoration:none;
+      font-weight:bold;
+      color: #252526;
+    }
+
+    .signup a:hover{
+      color:#888;
+    }
+
+    /* Responsivo */
+    @media(max-width:500px){
+
+      .logo{
+        left:20px;
+        font-size:2rem;
+      }
+
+      .login-container{
+        width:90%;
+        padding:35px 25px;
+      }
+
+    }
