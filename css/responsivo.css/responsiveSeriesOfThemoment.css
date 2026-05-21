@@ -1,0 +1,127 @@
+@media screen and (max-width: 1100px){
+
+    /* Alinhamento geral das series */
+    .standardSeriesBox{top: -17vw;}
+
+    /* Alinhamento do scroll */
+    .scroll{margin-left: 7vw;}
+
+    /* Alinhamento do titulo */
+    .titleAlignment{margin: 0 0 2vw 7vw;}
+
+    .standardSeriesBox {margin-bottom: 5vw;}
+
+    #topicsOfTheMonth{height:auto;}
+    /* Topico do mês */
+    #topicsOfTheMonth img,
+    #topicsOfTheMonth svg,
+    #topicsOfTheMonth #rightArrow,
+    #topicsOfTheMonth #leftArrow{
+
+        height: 150px;
+        width: 110px;
+        
+    }
+
+    #topicsOfTheMonth div{margin-left: 2%;}
+
+    /* Topico do mês, imagem da seta*/
+    #topicsOfTheMonth #rightArrow img,
+    #topicsOfTheMonth #leftArrow img{
+
+        height: 40%;
+        width: 40%;
+        
+    }
+
+}
+@media screen and (max-width: 933px){
+
+    /* Imagem da serie */
+    .scroll .imgSerie {
+        
+        height: 30%;
+        width: 30%;
+
+    }
+
+    /* seta do scrll das series */
+    .generalArrowStyle{
+
+        height: 16vw;
+        width: 13vw;
+
+    }
+
+}
+@media screen and (max-width: 421px){
+
+    /* Imagem da serie */
+    .scroll .imgSerie{
+
+        height: 40%;
+        width: 40%;
+
+    }
+
+    /* Seta do scroll */
+    .generalArrowStyle{
+
+        height: 20vw;
+        width: 13vw;
+
+    }
+
+}
+@media screen and (max-width: 976px){
+
+    .standardSeriesBox h2{font-size: 14px;}
+
+}
+
+@media screen and (max-width: 812px){
+
+    /* Topico do mês */
+    #topicsOfTheMonth img,
+    #topicsOfTheMonth svg,
+    #topicsOfTheMonth #rightArrow,
+    #topicsOfTheMonth #leftArrow{
+
+        width: 16vw;
+        height: 20vw;
+
+    }
+
+}
+
+@media screen and (max-width: 546px){
+
+    /* Topico do mês */
+    #topicsOfTheMonth img,
+    #topicsOfTheMonth svg,
+    #topicsOfTheMonth #rightArrow,
+    #topicsOfTheMonth #leftArrow{
+
+        width: 19vw;
+        height: 26vw;
+
+    }
+
+}
+
+
+@media screen and (max-width:432px){
+
+    /* Topico do mês */
+    #topicsOfTheMonth img,
+    #topicsOfTheMonth svg
+    #topicsOfTheMonth #rightArrow,
+    #topicsOfTheMonth #leftArrow {
+
+        width: 23vw;
+        height: 30vw;
+
+    }
+
+
+}

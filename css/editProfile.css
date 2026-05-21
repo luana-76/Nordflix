@@ -1,0 +1,210 @@
+body{
+
+    height: 100vh;
+    align-items: center;
+    height: 100vh;
+
+}
+
+/* Geral */
+
+.displayColumn{
+ 
+    display: flex;
+    flex-direction: column;
+
+}
+
+.displayRow{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+#editButton:hover, 
+input[type='button']:hover{
+
+    border: 1px solid #fff;
+    color: #fff !important;
+
+}
+
+span{
+
+    color: #fff;
+    font-size: 1vw;
+
+}
+
+.generalStyleButton{/* Estilo geral dos botões da página */
+
+    border: 1px solid #808080;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2vw;
+    background: transparent;
+    color: #807e78;
+
+}
+
+h2{
+    
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0;
+
+}
+
+label, h2{color:#c6c9cc;}
+
+section{
+
+    border-bottom: 2px solid rgb(45, 45, 45);
+    padding: 20px 0;
+
+}
+section:nth-child(1){
+
+    border: none;
+    padding: 20px 0 0 0;
+
+}
+
+#mainBox{
+
+    margin-top: 79px;
+    width: 51vw;
+
+}
+
+/* Primeira caixa */
+
+h1{
+
+    border-bottom: 2px solid #2d2d2d;
+    font-size: 3.5em;
+    font-weight: 500;
+    margin:0;
+
+}
+
+#perfil{width: 9vw;}
+
+#userName{
+
+    background: #666;
+    border: 0;
+    color: #fff;
+    height: 2.6vw;
+    outline: none;
+    width: 34vw;
+
+}
+
+#partOfSelect{
+
+    border-bottom: 2px solid rgb(45, 45, 45);
+    margin-left: 2vw;
+    width: 53vw;
+
+}
+
+label{
+    
+    font-weight: 500;
+    margin: 2vw 0 1vw 0;
+
+}
+
+select{
+
+    background: #000;
+    color: #fff;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 13vw;
+
+}
+
+/* Caixa dois */
+
+#ageSetting{
+
+    flex-direction: column;
+    margin-left: 11vw;
+
+}
+
+.classification{
+
+    background: #333;
+    font-weight: 600;
+    font-size: 1vw;
+    padding: 0.7vw;
+    text-align: center;
+
+}
+.classification:nth-child(2){margin-left: 5px;}
+
+#editButton{
+
+    border-radius: 2px;
+    font-size: 1.1vw;
+    margin-top: 25px;
+    padding: 0.4em 0em;
+    width: 6vw;
+
+}
+
+#ageChange #internalAgeChange{
+
+    display: flex;
+    margin: 15px 0;
+
+}
+
+/* Caixa três */
+
+#areaPermissions{padding-left: 11vw;}
+#permissions h2{margin-bottom: 15px;}
+
+.check{
+
+    background:transparent;
+    border: 1px solid #333;
+    border-radius: 0;
+    cursor: pointer;
+    height: 2vw;
+    vertical-align: middle;
+    width: 2vw;
+
+}
+
+/* Caixa final */
+
+#buttonBox input{
+
+    color: #807e78;
+    font-weight: 500;
+    font-size: 1em;
+    margin: 25px 0 0 1.6vw;
+    padding: 10px;
+    width: 10vw;
+
+}
+
+input[type='submit']{
+
+    background: #fff;
+    border: none;
+    color: #000 !important;
+
+}
+input[type='submit']:hover{
+
+    background: #c51010;
+    border: none;
+    color: #fff;
+
+}

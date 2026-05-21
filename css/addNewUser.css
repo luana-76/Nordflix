@@ -1,0 +1,159 @@
+body{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+
+}
+#mainBox{width: 40vw;}
+
+#title{
+
+    /*border-bottom: 1px solid #666;*/
+
+}
+
+#title h1{
+
+    font-size: 4vw;
+    font-weight: 400;
+    margin: 0;
+
+}
+
+#title h2{
+
+    color: #666;
+    font-size: 1.3vw;
+    font-weight: 400;
+
+}
+
+#fillingOutTheForm{
+
+    align-items: center;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    display: flex;
+    flex-direction: row;
+    padding: 2.2vw 0;
+
+}
+
+#fillingOutTheForm img[alt='profilePhoto']{
+
+    border-radius: 4px;
+    margin-right: 1.5vw;
+    width: 8vw;
+
+}
+
+#fillingOutTheForm input[type='text']{
+
+    background: #666;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    outline: 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    width: 18em;
+
+}
+::placeholder {
+    color: #fff;
+}
+
+#fillingOutTheForm #check{
+
+    background:transparent;
+    border: 1px solid #333;
+    border-radius: 0;
+    cursor: pointer;
+    height: 2vw;
+    width: 2vw;
+
+}
+
+#message{
+
+    display: none;
+    background: #fff;
+    color: #000;
+    font-size: 1vw;
+    left: 57vw;
+    margin-top: -10%;
+    padding: 1vw;
+    position: absolute;
+    text-align: center;
+    width: 19vw;
+
+}
+
+#arrow{
+
+    left: -3vw;
+    position: relative;
+    top: 2.5vw;
+    transform: rotate(180deg);
+    width: 1.4vw;
+
+}
+
+#fillingOutTheForm span{
+
+    font-size: 1.3vw;
+    font-weight: 400;
+    margin-left: 0.4vw;
+
+}
+
+/* Estilizando os botões */
+
+#buttons input[type='submit'], input[type='button']{
+
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2vw;
+    margin: 2em 0 1em;
+    padding: 0.5em 1.5em;
+
+}
+
+/* Botã continua */
+#buttons input[type='submit']{
+
+    background: #fff;
+    color: #000;
+    margin-right: 20px;
+
+}
+#buttons input[type='submit']:hover{
+
+    background: #c51010;
+    border: none;
+    color: #fff;
+
+}
+
+/* Botão cancelar */
+#buttons input[type='button']{
+
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+
+}
+#buttons input[type='button']:hover{
+
+    border: 1px solid #fff;
+    color: #fff;
+
+}
