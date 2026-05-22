@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NordFlix - CadastroStep
+  </title>
+  <link rel="stylesheet" href="./css/cadastro-steps.css"/>
+  <link rel="icon" type="image/png" href="./logo.ico">
+</head>
+<body>
+
+  <div class="page-bg">
+
+    <header>
+      <div class="logo" onclick="window.location.href='./cadastro.html'"><img src="./logoPreta.png" alt="logo NordFlix"/></div>
+      <div class="header-right">
+        <select class="language">
+          <option>Português</option>
+          <option>English</option>
+        </select>
+        <button class="login-btn">
+          <a href="./login.html">Entrar</a>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+  <!-- STEP 1: Conta -->
+  <div class="card" id="step1">
+    <p class="step-label">Passo <span class="step-num">1</span> de 3</p>
+
+    <div class="progress-bar">
+      <div class="seg active"></div>
+      <div class="seg"></div>
+      <div class="seg"></div>
+    </div>
+
+    <h2>Crie sua conta</h2>
+    <p class="subtitle">Rápido e fácil, cancele quando quiser.</p>
+
+    <div class="field">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" placeholder="Seu nome completo">
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="voce@email.com">
+    </div>
+
+    <div class="field">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Mínimo 8 caracteres">
+    </div>
+
+    <div class="field">
+      <label for="senha2">Confirmar senha</label>
+      <input type="password" id="senha2" placeholder="Repita a senha">
+    </div>
+
+    <div class="check-row">
+      <input type="checkbox" id="news">
+      <label for="news">
+        Quero receber novidades e promoções do NordFlix por email.
+      </label>
+    </div>
+
+    <button class="btn-main" onclick="goStep(2)">
+      Continuar
+    </button>
+  </div>
+
+  <!-- STEP 2: Pagamento -->
+  <div class="card hidden" id="step2">
+
+    <p class="step-label">Passo <span class="step-num">2</span> de 3</p>
+
+    <div class="progress-bar">
+      <div class="seg done"></div>
+      <div class="seg active"></div>
+      <div class="seg"></div>
+    </div>
+
+    <h2>Pagamento</h2>
+    <p class="subtitle">
+      Seus dados são protegidos com criptografia SSL.
+    </p>
+
+    <div class="field">
+      <label for="cartao">Número do cartão</label>
+      <input
+        type="text"
+        id="cartao"
+        placeholder="0000 0000 0000 0000"
+        maxlength="19"
+        oninput="fmtCard(this)"
+      >
+    </div>
+
+    <div class="field">
+      <label for="titular">Nome no cartão</label>
+      <input
+        type="text"
+        id="titular"
+        placeholder="Como aparece no cartão"
+      >
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="validade">Validade</label>
+        <input
+          type="text"
+          id="validade"
+          placeholder="MM/AA"
+          maxlength="5"
+          oninput="fmtDate(this)"
+        >
+      </div>
+
+      <div class="field">
+        <label for="cvv">CVV</label>
+        <input
+          type="text"
+          id="cvv"
+          placeholder="123"
+          maxlength="3"
+        >
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="cpf">CPF do titular</label>
+      <input
+        type="text"
+        id="cpf"
+        placeholder="000.000.000-00"
+        maxlength="14"
+        oninput="fmtCpf(this)"
+      >
+    </div>
+
+    <div class="ssl-badge">
+      <span class="ssl-icon">&#128274;</span>
+      <span>
+        Pagamento 100% seguro. Seus dados nunca são armazenados em texto puro.
+      </span>
+    </div>
+
+    <button class="btn-main" onclick="cadastrar()">
+      Assinar agora
+    </button>
+    <span id="erroMsg" class="erro-msg"></span>
+    
+    <button class="btn-back" onclick="goStep(1)">
+      &#8592; Voltar
+    </button>
+  </div>
+
+  <!-- STEP 3: Sucesso -->
+  <div class="card hidden" id="step3">
+
+    <div class="progress-bar" style="margin-bottom:28px">
+      <div class="seg done"></div>
+      <div class="seg done"></div>
+      <div class="seg done"></div>
+    </div>
+
+    <div class="success-wrap">
+
+      <div class="success-icon">&#10003;</div>
+
+      <h2>Tudo pronto!</h2>
+
+      <p class="subtitle">
+        Sua assinatura NordFlix foi ativada.<br>
+        Aproveite filmes, séries e muito mais!
+      </p>
+
+      <div class="summary-box">
+        <div class="summary-row">
+          <span class="summary-label">Email</span>
+          <span class="summary-val" id="emailShow">—</span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Próxima cobrança</span>
+          <span class="summary-val" id="billingDate">—</span>
+        </div>
+      </div>
+
+      <button class="btn-main" onclick="window.location.href='./usuario.html'">
+        Começar a assistir
+      </button>
+
+    </div>
+  </div>
+
+</main>
+
+  </div>
+
+  <script type="module">
+
+import { createClient }
+from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabaseUrl =
+'https://reblemspxlrjmjfbyhel.supabase.co'
+
+const supabaseKey =
+'sb_publishable_BxSMan9yVUGf2nCb5b-4HA_iW7Qx0YP'
+
+const supabase = createClient(
+  supabaseUrl,
+  supabaseKey
+)
+
+window.cadastrar = async function () {
+
+  const erroMsg =
+  document.getElementById('erroMsg')
+
+  erroMsg.textContent = ''
+
+  const nome =
+    document.getElementById('nome').value
+
+  const email =
+    document.getElementById('email').value
+
+  const senha =
+    document.getElementById('senha').value
+
+  const confirmarSenha =
+    document.getElementById('senha2').value
+
+  const receber_novidades =
+    document.getElementById('news').checked
+
+  const numero_cartao =
+    document.getElementById('cartao').value
+
+  const nome_cartao =
+    document.getElementById('titular').value
+
+  const validade =
+    document.getElementById('validade').value
+
+  const cvv =
+    document.getElementById('cvv').value
+
+  const cpf =
+    document.getElementById('cpf').value
+
+  if (
+    !nome ||
+    !email ||
+    !senha ||
+    !numero_cartao ||
+    !nome_cartao ||
+    !validade ||
+    !cvv ||
+    !cpf
+  ) {
+    erroMsg.textContent = 'Preencha todos os campos'
+    return
+  }
+  if (senha !== confirmarSenha) {
+
+   erroMsg.textContent = 'As senhas não coincidem'
+
+    return
+  }
+
+  const { data, error } = await supabase
+    .from('usuarios')
+    .insert([
+      {
+        nome,
+        email,
+        senha,
+        receber_novidades,
+        numero_cartao,
+        nome_cartao,
+        validade,
+        cvv,
+        cpf
+      }
+    ])
+
+  if (error) {
+
+  console.log(error)
+
+  erroMsg.textContent = error.message
+
+  return
+}
+
+  goStep(3)
+}
+
+window.goStep = function (n) {
+
+  document.querySelectorAll('.card').forEach(c => {
+    c.classList.add('hidden')
+  })
+
+  const target =
+    document.getElementById('step' + n)
+
+  target.classList.remove('hidden')
+
+  target.classList.add('fade-in')
+
+  setTimeout(() => {
+    target.classList.remove('fade-in')
+  }, 400)
+
+  if (n === 3) {
+
+    const email =
+      document.getElementById('email').value ||
+      'usuario@email.com'
+
+    document.getElementById('emailShow').textContent =
+      email
+
+    const d = new Date()
+
+    d.setMonth(d.getMonth() + 1)
+
+    document.getElementById('billingDate').textContent =
+      d.toLocaleDateString('pt-BR')
+  }
+}
+
+window.fmtCard = function (inp) {
+
+  let v =
+    inp.value.replace(/\D/g, '').substring(0, 16)
+
+  inp.value =
+    v.replace(/(.{4})/g, '$1 ').trim()
+}
+
+window.fmtDate = function (inp) {
+
+  let v = inp.value.replace(/\D/g, '')
+
+  if (v.length >= 2) {
+
+    v =
+      v.substring(0, 2) +
+      '/' +
+      v.substring(2, 4)
+  }
+
+  inp.value = v
+}
+
+window.fmtCpf = function (inp) {
+
+  let v =
+    inp.value.replace(/\D/g, '').substring(0, 11)
+
+  v = v
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d{1,2})$/, '$1-$2')
+
+  inp.value = v
+}
+
+</script>
+
+</body>
+</html>

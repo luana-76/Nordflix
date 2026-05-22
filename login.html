@@ -25,9 +25,10 @@
       <input type="password" id="senha" placeholder="Senha">
     </div>
 
-    <a href="./usuario.html"><button class="login-btn">
+    <button onclick="login()" class="login-btn">
       Entrar
-    </button></a>
+    </button>
+    <span id="erroLogin" class="erro-msg"></span>
 
     <div class="extras">
       <a href="#">Esqueceu a senha?</a>
@@ -40,6 +41,72 @@
     </div>
 
   </div>
+  <script type="module">
+
+import { createClient }
+from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabaseUrl =
+'https://reblemspxlrjmjfbyhel.supabase.co'
+
+const supabaseKey =
+'sb_publishable_BxSMan9yVUGf2nCb5b-4HA_iW7Qx0YP'
+
+const supabase = createClient(
+  supabaseUrl,
+  supabaseKey
+)
+
+window.login = async function () {
+
+  const erroLogin =
+    document.getElementById('erroLogin')
+
+  erroLogin.textContent = ''
+
+  const email =
+    document.getElementById('email').value
+
+  const senha =
+    document.getElementById('senha').value
+
+  if (!email || !senha) {
+
+    erroLogin.textContent =
+      'Preencha todos os campos'
+
+    return
+  }
+
+  const { data, error } = await supabase
+    .from('usuarios')
+    .select('*')
+    .eq('email', email)
+    .eq('senha', senha)
+    .single()
+
+  if (error) {
+
+    console.log(error)
+
+    erroLogin.textContent =
+      'Email ou senha inválidos'
+
+    return
+  }
+
+  if (!data) {
+
+    erroLogin.textContent =
+      'Email ou senha inválidos'
+
+    return
+  }
+
+  window.location.href = './usuario.html'
+}
+
+</script>
 
 </body>
 </html>
