@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Assinatura</title>
+    <link rel="stylesheet" href="./css/planos.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Explore nossa plataforma de assinaturas</h1>
+            <p>Selecione seu caminho para o sucesso</p>
+            
+            <div class="toggle-container">
+                <span>Mensal</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Anual</span>
+            </div>
+        </header>
+
+        <div class="pricing-grid">
+            
+            <div class="card card-1" data-tilt>
+                <h3>Basic</h3>
+                <div class="price">R$ <span class="price-val" data-monthly="29,99" data-annual="30,99">29,99</span><span class="period">/mês</span></div>
+                <ul>
+                    <li>Benefícios iniciais</li>
+                    <li>1 Usuário</li>
+                    <li>Suporte básico</li>
+                </ul>
+                <button class="btn">Assine Agora</button>
+            </div>
+
+            <div class="card card-2 featured" data-tilt>
+                <span class="badge">Mais Popular</span>
+                <h3>Pro</h3>
+                <div class="price">R$ <span class="price-val" data-monthly="40,99" data-annual="50,60">40,99</span><span class="period">/mês</span></div>
+                <ul>
+                    <li>Análise avançada</li>
+                    <li>5 Usuários</li>
+                    <li>Suporte prioritário</li>
+                </ul>
+                <button class="btn">Assine Agora</button>
+            </div>
+
+            <div class="card card-3" data-tilt>
+                <h3>Business</h3>
+                <div class="price">R$ <span class="price-val" data-monthly="79,99" data-annual="90,99">79,99</span><span class="period">/mês</span></div>
+                <ul>
+                    <li>Colaboração de equipe</li>
+                    <li>20 Usuários</li>
+                    <li>Gerente de conta</li>
+                </ul>
+                <button class="btn">Assine Agora</button>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+    <div id="package-modal" class="modal">
+        <div class="modal-content" data-tilt>
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Nome do Plano</h2>
+            <div class="modal-price" id="modal-price">R$ 00/mês</div>
+            
+            <hr class="modal-divider">
+            
+            <h3>O que está incluso neste pacote:</h3>
+            <ul id="modal-features">
+                </ul>
+            
+            <button class="btn-confirm">Confirmar Assinatura</button>
+        </div>
+    </div>
+
+    <script src="./js/scriptPL.js"></script>
+</body>
+</html>
