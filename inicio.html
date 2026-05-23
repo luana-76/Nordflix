@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="./css/inicio.css"/>
-    <link rel="icon" type="image/png" href="./logo.ico">
+    <link rel="icon" type="image/png" href="../assets/icons/logo.ico">
 </head>
 <body>
 
     <video id="inicio" autoplay playsinline>
-        <source src="arquivos/inicio.mp4" type="video/mp4">
+        <source src="./assets/videos/inicio.mp4" type="video/mp4">
     </video>
 
     <script>
@@ -19,7 +19,7 @@
 
         video.addEventListener("ended", () => {
 
-            window.location.href = "cadastro.html";
+             window.location.href = "pages/cadastro.html";
 
         });
 

@@ -2,16 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio - Netflix</title>
-    <link href='css/reset.css' rel='stylesheet'/>
-    <link href='css/navigationBar.css' rel='stylesheet'/>
-    <link href='css/filmShowing.css' rel='stylesheet'/>
-    <link href='css/mainSeries.css' rel='stylesheet'/>
-    <link href='css/responsivo.css/navigationBarResponsive.css' rel='stylesheet'/>
-    <link href='css/responsivo.css/responsiveSeriesOfThemoment.css' rel='stylesheet'/>
-    <link href='css/stylesCrianca.css' rel='stylesheet'/>
-    <link rel="icon" type="image/png" href="./logo.ico">
+    <title>início - Netflix</title>
+    <link href='../css/reset.css' rel='stylesheet'/>
+    <link href='../css/navigationBar.css' rel='stylesheet'/>
+    <link href='../css/filmShowing.css' rel='stylesheet'/>
+    <link href='../css/mainSeries.css' rel='stylesheet'/>
+    <link href='../css/responsivo.css/navigationBarResponsive.css' rel='stylesheet'/>
+    <link href='../css/responsivo.css/responsiveSeriesOfThemoment.css' rel='stylesheet'/>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.ico">
+    
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 
             <video id='tagVideo' controls autoplay muted>
 
-                <source src="arquivos/theCupheadShow.mp4"/>
+                <source src="../assets/videos/HemlockGrove.mp4"/>
 
             </video>
 
@@ -34,7 +35,7 @@
                 <div id='firstBox'>
 
                     <a href='' target="_self" role="logo">
-                        <img src="./logoPreta.png" id='logo' alt='NordFlix'/>
+                        <img src="https://img.icons8.com/ios-filled/90/e50914/netflix--v1.png" id='logoNetflix' alt='Netflix'/>
                     </a>
                     
                     <ul id='firstList'>
@@ -75,23 +76,101 @@
                         </div>
                     </div>
 
-                    <div id='backButtonChild'>
-
-                        <a href='./usuario.html'>
-                            <img src='https://occ-0-933-420.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABRt4NpsGm7sIHiYKdr7VmHetkMrYn1RzUTYJCT2m2e1gls25nPLMmuXkYiFvaHkpOyGiTT8L0DnCrJWzgvU3VlR0B1VIYmHWYmgjfQ_Fr1HyCYIA6RmGub3PTxZcKtIdt4Dw3ShZ4ZzXJA.png?r=080' alt='children'/>
-                        </a>
-
+                    <!-- Botão infantil -->
+                    <div id="childrensButton">
+                        <a href="childrensPage.html" target="_self">infantil</a>
                     </div>
 
-                    <div>
+                    <div id="notification">
 
-                        <button id='netflixBut'>
-                            sair de infantil
-                        </button>
+                        <div id="alertNotification">1</div>
+                        <img src="https://img.icons8.com/material/25/ffffff/bell--v2.png" alt='Bell'/>
+                        <div id='openNotificationBox'>
+
+                            <div id='notificationBox'>
     
+                                <img src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSiDGIWAUn5bLUZGhvThDPuYbaaDpxN0hb1nCgzzG7-BZgFBOB6UnlfXyEC60Le4T1PZo6VvFdscqsAkjQKGfboOw1Czqo-fRx7l1gBn14lTgs4RVuJ-bLlksPUloCfmOObVXayaSRClO_l_ZDIuPfhkNwYpa6VpwCqgLX8f8VvSeu1T8i0khpOLWcqAFJwLaoZ729uzRJszYksBzvBa6nQzV_0enM_Dc91XTb3AKRiEuNUgqqfL-BvmXBn4VKndqAs4Dq5VKBce3zLcskFo_hNGIBkQfN0Bb06nSg6dMO8ZBgFnbCItg9Bccu9YswpOrGkAh1LZlODZCY28IqmNPfaekorJMBSsdxzvrEgFZnU.jpg?r=651" alt="serie"/>
+    
+                                <div>
+    
+                                    <h2>Estreia em 3 de janeiro</h2>
+                                    <h2>Temos novidades para você.</h2>
+                                    <span>há 3 dias</span>
+    
+                                </div>
+    
+                            </div>
+                            <div id='notificationBox'>
+    
+                                <img src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSiDGIWAUn5bLUZGhvThDPuYbaaDpxN0hb1nCgzzG7-BZgFBOB6UnlfXyEC60Le4T1PZo6VvFdscqsAkjQKGfboOw1Czqo-fRx7l1gBn14lTgs4RVuJ-bLlksPUloCfmOObVXayaSRClO_l_ZDIuPfhkNwYpa6VpwCqgLX8f8VvSeu1T8i0khpOLWcqAFJwLaoZ729uzRJszYksBzvBa6nQzV_0enM_Dc91XTb3AKRiEuNUgqqfL-BvmXBn4VKndqAs4Dq5VKBce3zLcskFo_hNGIBkQfN0Bb06nSg6dMO8ZBgFnbCItg9Bccu9YswpOrGkAh1LZlODZCY28IqmNPfaekorJMBSsdxzvrEgFZnU.jpg?r=651" alt="serie"/>
+    
+                                <div>
+    
+                                    <h2>Estreia em 3 de janeiro</h2>
+                                    <h2>Temos novidades para você.</h2>
+                                    <span>há 3 dias</span>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
                     </div>
+
                     
-                </div>
+
+                    <!--Parte do usuário e configurações-->
+                    <ul id='user_list'>
+
+                        <!--Parte visível-->
+                        <li id='listTwo'>
+                            <img id="profile-icon" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABRZTyekrojJuCDNoX1H3L2x-2xf7fN6zW6dCk7VlJpe4gFmpM6otBAq5qo7-4lXJdZjJ77SoTFH8x_dwWM4VZUEQdKcSCzTFSYJ-.png?r=3fc" alt="perfil"/>
+                            <img id='arrow' alt='arrow' src="https://img.icons8.com/fluency-systems-filled/10/ffffff/triangle.png"/>
+                        </li>
+
+                        <!--Caixa que aparecerá quando o usuário passar o mouse em cima do botão-->
+                        <ul id='subListTwo'>
+
+                            <li class="listTwo__li">
+                                <a href='./usuario.html' target="_self">
+                                    <img id="profile-icon" src='https://occ-0-933-420.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABRC8mzIBBNKTufxcrantuy6xGn74_7mpSeJCy1r5NRrl81zQePQ2bzClJfamIftPM-GJq9He6jbuCc0UGYeCXY_ngQNJUyM.png?r=3fc' alt="perfil"/>Sol
+                                </a>
+                            </li>
+                            <li class="listTwo__li">
+                                <a href='./userOne.html' target="_self">
+                                    <img id="profile-icon" src='https://occ-0-933-420.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXgA1N3R-hZOO_Hb5n-ClQ9HBOtV6Btr3Pof7UAFYcgn9n9q74Ft0dkW-z4KtsyyiUs49wOwFDO8l16UkszgQowacjg2szSPkHAT.png?r=936' alt="perfil"/>Lua
+                                </a>
+                            </li>
+                            
+                            <li class="listTwo__li">
+                                <a href='./childrensPage.html' target="_self">
+                                    <img src='https://occ-0-933-420.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABYh5hkXId5o_KJ5wCel_N8WJBVvymdS8CZKNFAEaGe4-xhjGuEPJoW288Q5YEFYopXfwp2EeqLMpGKbMINPHKZP7mdsHWKsmmn4o0DDeRxyU1qj4asp2eSTw9LoMSFSovfSFrSgjE3mIWg.png?r=080' alt="perfil"/>Desenhos
+                                </a>
+                            </li>
+                            <li class="listTwo__li">
+                                <a href='' target="_self">
+                                    <img src="https://img.icons8.com/windows/25/ffffff/pencil.png" alt='pencil'/>Gerenciar perfis
+                                </a>
+                            </li>
+                            <li class="listTwo__li">
+                                <a href='' target="_self">
+                                    <img src="https://img.icons8.com/ios/25/ffffff/gender-neutral-user.png" alt='user'/>Conta
+                                </a>
+                            </li>
+                            <li class="listTwo__li">
+                                <a href='' target="_self">
+                                    <img src="https://img.icons8.com/material-outlined/25/ffffff/help.png" alt='help'/>Centro de ajuda
+                                </a>
+                            </li>
+                            <li class="listTwo__li">
+                                <a href='' target="_self">Sair da Netflix</a>
+                            </li>
+
+                        </ul>
+
+                    </ul>
+                    
+                </div>	
                 
             </div>
         </nav>
@@ -101,7 +180,7 @@
             <div id='internalSeries'>
 
                 <h1>
-                    <img title='cuphead' id='title' src='https://occ-0-5308-3851.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXVE5aZiIwGdXFbj8CPG83v269WfVwrklHVsqZsYD76HnO8H7EPYILFy8I0HmWSzYsL4J-efx8O6ROZ7u7W9c1_B6CqHRmepDB0SvX963RziyhoslGRRKYyCIW0TwVIlWiwnXtpohxDEyy59zdT9kwuP6JJPl_nLMb0uALzHAM5YnfeEVuwghA.webp?r=cf6' alt="cuphead"/>
+                    <img title='Hemlock Grove' id='title' src='https://occ-0-933-420.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXQWRPUlrFXrMlZVfx3gnEg0-cgK_gxk8nB99hEM_xv-jZngA30CFRbhx8OJ3uNhG3c9kig9kzj_2spk2zOHZX6ZRGeV2NE3nCNQzYka358_6-crPOQ4EW4uhrTq_xLBn52i4Wkr87tyqiHSUXA6-X-vhdroIyQMZUU79YYhD9imcDCFtbZObw.webp?r=572' alt="hemlock grove"/>
                 </h1>
 
                 <!-- Top serie do momento -->
@@ -112,8 +191,8 @@
 
                 </div>-->
                 
-                <p>Acompanhe as desventuras do impulsivo Xicrinho e seu ingênuo</br>
-                    irmão Caneco nesta série de animação baseada no famoso</br> videogame.</p>
+                <p>Segredos são só parte do cotidiano da pequena Hemlock Grove:<br/>
+                                            o lado sinistro da cidade se esconde em plena luz do dia.</p>
 
                 <!-- Parte dos botões -->
                 <div>
@@ -147,7 +226,7 @@
 
             <div class="titleAlignment">
                 <div>
-                    <h2>Principais buscas
+                    <h2>Séries européias
                         <span>Ver tudo
                         <img class="arrow" alt='arrow' src='https://img.icons8.com/metro/15/54b9c5/forward.png'/></span>
                     </h2>
@@ -178,7 +257,7 @@
                 </button>
 
                 <!--  Parte 1-->
-                <img class='imgSerie inicioMortePCarona' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/rkETp35xJVj-6WaffQsS77awykM/AAAABazqukAAmBEEHYLTXblvO2USIEdMjpoEY9oz1jHEaLB_dbzidie3ZsUq7ugzUUPyJFMWc66dxAcJfVwzwwh22IfaKPFiS437k5BC6ZlVCBMVoEe7XVb17A9PAtLXq9RgYY0wVcUJ2LV2R1zAtg7_clVtdFRqb0MUGo3OBcGJDadDDYts4ZlqyKiNDYWG5JOWRzToL-jef1aUFPETgYVjdkd9f_zMYGtfEyfcVSIEf-gsinpZQwvPJhqbdqIGMldWOvdHgB3vcN2dHXIQ-wbgbfYBl6sPfQDSkUMv63y8LiLX0bFb5YSpmfSvVh4_A6zPKMOxxdC22jwx_3o.webp?r=c4b">
+                <img class='imgSerie inicioMortePCarona' id='saiki' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/rkETp35xJVj-6WaffQsS77awykM/AAAABY6DxnkIgrkMW2PHKu3MQ_incWy222mhVCdbbJxjiQ7B_QPVlnLBh4QKvRoOxq08uAMbtP-KTfP4FgDsorfEl0_At0C6tgXxiWs.webp?r=cc2">
   
                 <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/rkETp35xJVj-6WaffQsS77awykM/AAAABfRYTi7CMLqPoaybZuGKI4WHNnHgDEpC0bfA3GC9D9gTtA9eY9E084ij9x9bEfulNAyfW60REPaFwAygmyN9ALkNyz0uR6mPqqMdWm847-z38cVbHGujrp8eJRFXULtWoN-G.jpg?r=e60">
 
@@ -289,10 +368,11 @@
             </div>
 
         </section>
+
         <section class="standardSeriesBox" id="topdez">
                 <div class="titleAlignment">
                     <div>
-                        <h2>Todo mundo está assistindo
+                        <h2>Brasil: top 10 em filmes hoje
                             <span>Ver tudo
                             <img class="arrow" alt='arrow' src='https://img.icons8.com/metro/15/54b9c5/forward.png'/></span>
                         </h2>
@@ -406,7 +486,7 @@
 
             <div class="titleAlignment">
                 <div>
-                    <h2>anime
+                    <h2>Séries européias
                         <span>Ver tudo
                         <img class="arrow" alt='arrow' src='https://img.icons8.com/metro/15/54b9c5/forward.png'/></span>
                     </h2>
@@ -553,7 +633,7 @@
 
             <div class="titleAlignment">
                 <div>
-                    <h2>A união faz a força
+                    <h2>Séries européias
                         <span>Ver tudo
                         <img class="arrow" alt='arrow' src='https://img.icons8.com/metro/15/54b9c5/forward.png'/></span>
                     </h2>
@@ -584,37 +664,37 @@
                 </button>
 
                 <!--  Parte 1-->
-                <img class='imgSerie inicioMortePCarona' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie inicioMortePCarona' alt="A morte pede carona" src="/img/download (1).jpg">
   
-                <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie' alt="A morte pede carona" src="/img/download (2).jpg">
 
-                <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie' alt="A morte pede carona" src="/img/download (3).jpg">
 
-                <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie' alt="A morte pede carona" src="/img/download (4).jpg">
                     
-                <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie' alt="A morte pede carona" src="/img/download.jpg">
 
-                <img class='imgSerie SagaWinxInicio' alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie SagaWinxInicio' alt="Fate: A saga winx" src="/img/Gravity Falls (2012 - 2014).jpg">
 
-                <img class='imgSerie' alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie' alt="Fate: A saga winx" src="/img/hora de aventura.jpg">
 
-                <img class='imgSerie' alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie' alt="Fate: A saga winx" src="/img/Squid Games 2 Kdrama Poster.jpg">
 
-                <img class='imgSerie' alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie' alt="Fate: A saga winx" src="/img/wen_cars 👍.jpg">
 
-                <img class='imgSerie SagaWinxFinal' alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie SagaWinxFinal' alt="Fate: A saga winx" src="/img/Anime Review_ Vinland Saga Season 2 - Breaking it all Down.jpg">
 
                 <!-- Parte 1 final -->
 
                 <!-- Parte 2 começo -->
 
-                <img class='imgSerie OidnbInicio' alt="Oidnb" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcvkb8R1RJahSIhq69_b-RH1rd4jGmRfY_3VZSHo8f9BkfSAptu0TGd4UX1SUkB11e5ezesfEaZ0jthh_EPNEF16rQucqT1epNG5UeS-jUNe_vbxTq_e1JZYUdP3-pLtKYHz.jpg?r=feb">
+                <img class='imgSerie OidnbInicio' alt="Oidnb" src="/img/download (10).jpg">
 
-                <img class='imgSerie' alt="Oidnb" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcvkb8R1RJahSIhq69_b-RH1rd4jGmRfY_3VZSHo8f9BkfSAptu0TGd4UX1SUkB11e5ezesfEaZ0jthh_EPNEF16rQucqT1epNG5UeS-jUNe_vbxTq_e1JZYUdP3-pLtKYHz.jpg?r=feb">
+                <img class='imgSerie' alt="Oidnb" src="/img/Adam Sandler.jpg">
 
-                <img class='imgSerie' alt="Oidnb" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcvkb8R1RJahSIhq69_b-RH1rd4jGmRfY_3VZSHo8f9BkfSAptu0TGd4UX1SUkB11e5ezesfEaZ0jthh_EPNEF16rQucqT1epNG5UeS-jUNe_vbxTq_e1JZYUdP3-pLtKYHz.jpg?r=feb">
+                <img class='imgSerie' alt="Oidnb" src="/img/Blue Suit Invincible.jpg">
 
-                <img class='imgSerie' alt="Oidnb" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcvkb8R1RJahSIhq69_b-RH1rd4jGmRfY_3VZSHo8f9BkfSAptu0TGd4UX1SUkB11e5ezesfEaZ0jthh_EPNEF16rQucqT1epNG5UeS-jUNe_vbxTq_e1JZYUdP3-pLtKYHz.jpg?r=feb">
+                <img class='imgSerie' alt="Oidnb" src="/img/Margot Robbie as Barbie_ A George Vreeland Hill pin_.jpg">
 
                 <img class='imgSerie OidnbFinal' alt="Oidnb" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcvkb8R1RJahSIhq69_b-RH1rd4jGmRfY_3VZSHo8f9BkfSAptu0TGd4UX1SUkB11e5ezesfEaZ0jthh_EPNEF16rQucqT1epNG5UeS-jUNe_vbxTq_e1JZYUdP3-pLtKYHz.jpg?r=feb">
 
@@ -623,25 +703,25 @@
                 <!-- Parte 3 inicio -->
                 <img class='imgSerie bakiInicio' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
 
-                <img class='imgSerie' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie' alt="Baki" src="/img/download (4).jpg">
 
-                <img class='imgSerie' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie' alt="Baki" src="/img/download (9).jpg">
 
-                <img class='imgSerie' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie' alt="Baki" src="/img/Avatar (2009).jpg">
 
-                <img class='imgSerie bakiFinal' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie bakiFinal' alt="Baki" src="/img/Rio birds.jpg">
 
                 <!-- Parte 3 final -->
 
                 <!-- Parte 4 inicio -->
 
-                <img class='imgSerie inicioDahmer' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie inicioDahmer' alt="Dahmer" src="/img/Steven Universe_ Future.jpg">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="/img/download (8).jpg">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="/img/download (6).jpg">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="/img/download (11).jpg">
 
                 <img class='imgSerie dahmerFinal' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
 
@@ -650,24 +730,24 @@
                 <!-- Parte 5 inicio -->
                 <img class='imgSerie misturaUmInicio' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="QVRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
 
                 <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
 
                 <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
 
-                <img class='imgSerie mistaUmFinal' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie mistaUmFinal' alt="A morte pede carona" src="/img/ALVINNN!!! and The Chipmunks Season 1.jpg">
 
                 <!-- parte 5 final-->
 
                 <!-- parte 6 inicio -->
-                <img class='imgSerie misturaDoisInicio' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie misturaDoisInicio' alt="A morte pede carona" src="/img/S_W.A.T. - S01 E01 - Balle perdue _ TF1+">
 
-                <img class='imgSerie'  alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie'  alt="Fate: A saga winx" src="/img/Adam Sandler.jpg">
 
-                <img class='imgSerie' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
+                <img class='imgSerie' alt="A morte pede carona" src="/img/download (7).jpg">
 
-                <img class='imgSerie'  alt="Fate: A saga winx" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYCBNyKU2N6zXaoepQAyELmMySCiQpCeXSWRc6Kc0PIOhYYH5iRH8deEwQYtDShQUnwWEswBBQPwa2rGiXq9Dssi7B0RSHNfeS8YpzMaCEpf2sewJ_e7jNvSSmX8vTnW0MmzNKfyQsQccdpqUfwx5PBpMZ9-oRbhKbtEVHDvnkUL1b70692wKThoS0JqhqGse6OObAH89zb_aapX0y7YiUpGx4498GXf8ZcWOW3iLUFaVyTNVgnNumQTRpe6qOEjoHsqWSqF6g6z3upLvwBcSVN_dOMBfVVI17P9HLTDhtBisE1MZKrvoNWkojXm9MS2__9GwKhUlKVyTCnUmX8Q_S1W.jpg?r=129">
+                <img class='imgSerie'  alt="Fate: A saga winx" src="/img/Minecraft в кино (2025) _ Майнкрафт в кино _ Minecraft Movie.jpg">
 
                 <img class='imgSerie misturaDoisFinal' alt="A morte pede carona" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS25tFDY_Cij0mgEldWnkl1pOq8qtROREaX873sEWo43DIHyX52P4qoB0BUGTWfRMSS7uiChSKqdtbAx4P6FkPXNZ3VRr3dZsfs.webp?r=0f1">
 
@@ -675,13 +755,13 @@
 
                 <!-- Parte 7 inicio -->
 
-                <img class='imgSerie' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie' alt="Baki" src="/img/https___hubbsmoviereviews_wordpress.com_2024_09_05_the-garfield-movie-2024_">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="/img/download (10).jpg">
 
-                <img class='imgSerie' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
+                <img class='imgSerie' alt="Baki" src="/img/Hotel Transylvania 2 (Bonus Content).jpg">
 
-                <img class='imgSerie' alt="Dahmer" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeIkwRUMnIajdlpYq4tG9xz28GkE_GbEgDcQukdv2ypmnOdTnVYZETlumpla580F5y_CIvnYHewjauf9-Bpl0RK3jzEL-VRH-L-OjbimiX2O-FU40CJRlV5NfOZruluIghbhTXVmsmDYD6DCjYcajonkPD5khNv3zeUp0Lllb9brwMVxiyD1xEGmyWj2dVI.jpg?r=e31">
+                <img class='imgSerie' alt="Dahmer" src="/img/Stuart Little.jpg">
 
                 <img class='imgSerie misturaTresFinal' alt="Baki" src="https://occ-0-933-420.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLoOfuQ4p3M08VAVGCiw16b5zjFOOoNxm4rkmjsIyQTzAEODt75ufbEAQwxFdb2JYWt_xxxsofPH1oCkGekxPaswrnzGBdpC2asvABQd8Xh6VMu10bWBz62VZ3neBPDTkJF.jpg?r=d38">
 
@@ -697,8 +777,7 @@
         </section>
 
     </main>
-    <script src="js/index.js">
-
+    <script src="../js/index.js">
 
         //Botão do video
 
@@ -734,8 +813,6 @@
 
 
         document.querySelector("#tagVideo").onended = ()=>{
-            
-            
             
             //imagem botão
             document.querySelector('#muteImg').addEventListener('click', event=>{
