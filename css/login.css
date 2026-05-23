@@ -149,3 +149,114 @@ button:hover{
   display: block;
   text-align: center;
 }
+
+@media(max-width:768px){
+
+    section{
+        padding:30px 15px;
+    }
+
+    h1{
+        font-size:34px;
+
+        margin-bottom:35px;
+    }
+
+    section #alignment {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:20px;
+    }
+    .littleBox{
+        width:40%;
+        min-width:120px;
+    }
+
+   
+
+    .managementActive{
+        width:120px;
+        height:120px;
+        min-width:120px;
+        min-height:120px;
+    }
+
+    .littleBox img{
+        width:114%;
+        min-width:120px;
+    }
+
+    .littleBox #addPattern{
+        width:70px;
+        min-width:70px;
+    }
+
+    .littleBox span{
+        font-size:15px;
+    }
+
+    .littleBox .pencilImage{
+        width:50px;
+        min-width:50px;
+
+        margin:35px;
+    }
+
+    button{
+        width:100%;
+
+        max-width:300px;
+
+        margin-top:45px;
+
+        font-size:16px;
+    }
+
+}
+
+@media(min-width:769px) and (max-width:1024px){
+
+    h1{
+        font-size:52px;
+    }
+
+    .littleBox{
+        width:22%;
+    }
+
+    .managementActive{
+        width:180px;
+        height:180px;
+    }
+
+    .littleBox img{
+        width:180px;
+    }
+
+    .littleBox #addPattern{
+        width:120px;
+    }
+
+    .littleBox .pencilImage{
+        width:70px;
+        margin:50px;
+    }
+
+}
+
+
+@media(min-width:1600px){
+
+    h1{
+        font-size:70px;
+    }
+
+    .littleBox span{
+        font-size:24px;
+    }
+
+    button{
+        font-size:22px;
+    }
+
+}

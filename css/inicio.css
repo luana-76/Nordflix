@@ -1,0 +1,45 @@
+   body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: black;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #inicio{
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+ 
+
+        @media (max-width: 480px){
+
+            #inicio{
+                object-position: center;
+            }
+
+        }
+
+        @media (min-width: 481px) and (max-width: 1024px){
+
+            #inicio{
+                object-position: center;
+            }
+
+        }
+
+        @media (min-width: 1440px){
+
+            #inicio{
+                object-position: center;
+            }
+
+        }

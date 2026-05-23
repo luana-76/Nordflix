@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela Inicial</title>
+    <link rel="stylesheet" href="./css/inicio.css"/>
+    <link rel="icon" type="image/png" href="./logo.ico">
+</head>
+<body>
+
+    <video id="inicio" autoplay playsinline>
+        <source src="arquivos/inicio.mp4" type="video/mp4">
+    </video>
+
+    <script>
+
+        const video = document.getElementById("inicio");
+
+        video.addEventListener("ended", () => {
+
+            window.location.href = "cadastro.html";
+
+        });
+
+    </script>
+
+</body>
+</html>

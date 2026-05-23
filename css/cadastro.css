@@ -162,40 +162,129 @@
       background:#391944;
     }
 
-    @media(max-width:768px){
+  @media(max-width:768px){
 
-      header{
-        padding:20px;
-      }
-
-      .logo{
-        font-size:38px;
-      }
-
-      .content h1{
-        font-size:42px;
-      }
-
-      .content h3{
-        font-size:22px;
-      }
-
-      .content p{
-        font-size:18px;
-      }
-
-      .email-box{
-        flex-direction:column;
-        width:100%;
-      }
-
-      .email-box input{
-        width:100%;
-      }
-
-      .email-box button{
-        width:100%;
-        font-size:22px;
-      }
-
+    header{
+        padding:20px 15px;
     }
+
+    .logo img{
+        width:120px;
+    }
+
+    .header-right{
+        gap:8px;
+    }
+
+    .language{
+        padding:8px 10px;
+        font-size:12px;
+    }
+
+    .login-btn{
+        padding:8px 14px;
+    }
+
+    .login-btn a{
+        font-size:13px;
+    }
+
+    .content{
+        padding:120px 20px 40px;
+    }
+
+    .content h1{
+        font-size:34px;
+        line-height:1.2;
+
+        margin-bottom:20px;
+    }
+
+    .content h3{
+        font-size:19px;
+
+        margin-bottom:15px;
+    }
+
+    .content p{
+        font-size:16px;
+        line-height:1.5;
+
+        margin-bottom:20px;
+    }
+
+    .email-box{
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .email-box input{
+        width:100%;
+        height:55px;
+
+        font-size:16px;
+    }
+
+    .email-box button{
+        width:100%;
+        height:55px;
+
+        font-size:20px;
+    }
+
+}
+
+
+@media(min-width:769px) and (max-width:1024px){
+
+    header{
+        padding:25px 30px;
+    }
+
+    .logo img{
+        width:160px;
+    }
+
+    .content h1{
+        font-size:52px;
+    }
+
+    .content h3{
+        font-size:26px;
+    }
+
+    .content p{
+        font-size:20px;
+    }
+
+    .email-box{
+        flex-direction:column;
+    }
+
+    .email-box input{
+        width:80%;
+    }
+
+    .email-box button{
+        width:80%;
+    }
+
+}
+
+
+@media(min-width:1600px){
+
+    .content h1{
+        font-size:90px;
+    }
+
+    .content h3{
+        font-size:38px;
+    }
+
+    .content p{
+        font-size:26px;
+    }
+
+}
