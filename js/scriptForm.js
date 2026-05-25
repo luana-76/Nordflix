@@ -1,11 +1,15 @@
-// 1. Configurar a ligação com o projeto Supabase (URL limpa padrão)
-const SUPABASE_URL = "https://snjgrkqvehryxiuuxfjx.supabase.co"; 
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNuamdya3F2ZWhyeGl1dXV4Zmp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNzU2ODksImV4cCI6MjA5NDY1MTY4OX0.6_0viyyXJsh5EnrBhz0uQERnbGEKGgdjNnSba-IRpyc"; 
+// 1. Configurar a ligação com o projeto Supabase (Substitua com os dados do seu NOVO projeto)
+const SUPABASE_URL = "https://snjgrkqvehrxiuuuxfjx.supabase.co"; 
+const SUPABASE_KEY = "sb_publishable_NNrtX3lpwbBgsuDleTvuAg_I9v6-ufR"; 
 
-// Instancia a conexão usando o cliente padrão do CDN
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// Inicialização oficial do cliente para ambiente de desenvolvimento local
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+  auth: {
+    persistSession: false
+  }
+});
 
-// Dicionário de mapeamento para as categorias ficarem amigáveis
+// Dicionário de mapeamento para as categorias ficarem amigáveis na tela
 const categoriesMap = {
     'ui-ux': 'Design',
     'performance': 'Performance',
@@ -15,6 +19,7 @@ const categoriesMap = {
 
 // --- Funções de Ação Globais (Conectadas ao Banco) ---
 
+// Função para EXCLUIR um feedback do banco e da tela
 async function deleteComment(id) {
     if (confirm("Deseja realmente excluir este feedback permanente do banco?")) {
         try {
@@ -25,6 +30,7 @@ async function deleteComment(id) {
 
             if (error) throw error;
 
+            // Se deletou com sucesso no banco, remove da tela com animação
             const el = document.getElementById('feedback-' + id);
             if (el) {
                 el.style.opacity = '0';
@@ -38,6 +44,7 @@ async function deleteComment(id) {
     }
 }
 
+// Função para EDITAR o texto de um comentário no banco e na tela
 async function editComment(id) {
     const el = document.getElementById('feedback-' + id);
     const p = el.querySelector('.comment-text');
@@ -52,6 +59,7 @@ async function editComment(id) {
 
             if (error) throw error;
 
+            // Se salvou no banco, atualiza o texto na tela imediatamente
             p.innerText = novoTexto.trim();
         } catch (err) {
             console.error("Erro ao atualizar:", err);
@@ -60,7 +68,7 @@ async function editComment(id) {
     }
 }
 
-// --- Inicialização do App ---
+// --- Inicialização do App assim que o HTML carregar ---
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('feedbackForm');
     const muralList = document.getElementById('muralList');
@@ -70,10 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Escutar o evento de envio do formulário
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Pegando os dados usando os names do seu HTML
+        // Capturar os dados com segurança usando o FormData do formulário
         const formData = new FormData(form);
         const ratingSelected = formData.get('rating'); 
         const categorySelected = formData.get('category'); 
@@ -84,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Efeito visual de carregamento no botão de envio
         const btn = form.querySelector('.btn-submit') || form.querySelector('button[type="submit"]');
         const originalText = btn ? btn.innerText : 'Enviar Feedback';
         
@@ -93,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            // Enviar para o banco de dados
-            const { data, error } = await supabaseClient
+            // Inserir os dados na tabela do Supabase
+            const { error } = await supabaseClient
                 .from('feedbacks')
                 .insert([
                     { 
@@ -107,13 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (error) throw error;
 
             alert('Feedback enviado com sucesso!');
-            form.reset(); 
-            atualizarMural(); 
+            form.reset(); // Limpa os campos do formulário
+            atualizarMural(); // Recarrega a lista trazendo o novo dado inserido
 
         } catch (err) {
             console.error("Erro capturado no envio:", err);
             alert("Erro ao conectar com o Supabase: " + (err.message || "Falha na rede"));
         } finally {
+            // Restaura o estado original do botão independente de sucesso ou falha
             if (btn) {
                 btn.innerText = originalText;
                 btn.disabled = false;
@@ -121,10 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Função interna para renderizar/gerar a estrutura HTML de cada item do banco
     function renderFeedbackItem(item) {
         const div = document.createElement('div');
         div.className = 'comment-item';
-        div.id = 'feedback-' + item.id;
+        div.id = 'feedback-' + item.id; // Define um id único para o elemento na tela
 
         const labelCategoria = categoriesMap[item.category] || item.category || 'Geral';
 
@@ -140,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (muralList) muralList.appendChild(div);
     }
 
+    // Função para buscar dados do Supabase e renderizar na tela
     async function atualizarMural() {
         if (!muralList) return;
 
@@ -147,11 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const { data: feedbacks, error } = await supabaseClient
                 .from('feedbacks')
                 .select('*')
-                .order('created_at', { ascending: false });
+                .order('created_at', { ascending: false }); // Traz os feedbacks mais recentes primeiro
 
             if (error) throw error;
 
+            // Limpa o mural para evitar duplicação de itens
             muralList.innerHTML = '';
+            
+            // Renderiza cada um dos feedbacks vindos do banco
             feedbacks.forEach(item => {
                 renderFeedbackItem(item);
             });
@@ -160,6 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Carrega o mural automaticamente ao abrir a página
+    // Executa a busca automática e popula a lista assim que abre a página
     atualizarMural();
 });
